@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato:wght@700&family=Poppins:wght@500&family=Prompt:wght@300&family=Work+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>GrabPanda</title>
+    <link rel = "icon" href = "https://i.imgur.com/ycMAR4r.png" type = "image/x-icon">
+    <style>
+        body {
+            background-image: url(https://i.imgur.com/PT485EP.png);
+            background-size: cover;
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        img {
+            height: 65px;
+            width: 65px;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 90px;
+            font-family: 'Lato', sans-serif;
+
+        }
+        h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 50px;
+        }
+        h4 {
+            font-family: 'DM Serif Display', serif;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            color: rgb(251, 176, 188) !important;
+        }
+        .rawr {
+            color: rgba(0, 0, 0, 0.424);
+            font-size: 20px;
+        }
+        .johncena {
+            color: transparent !important;
+        }
+        .container {
+            max-width: 95%;
+            height: 300px;
+        }
+        .headerimage {
+            background-image: url(https://i.imgur.com/qZEHQLd.png);
+            border-radius: 15px;
+            background-size: cover;
+        }
+        .footer {
+            text-align: center;
+            height: 50px;
+            background-color: rgb(253, 225, 215);
+            width: 100%;
+        }
+        .card {
+            width: 225px;
+            padding: 20px;
+            margin: 10px;
+        }
+        .btn{
+            width: 70px;
+            margin: 10px;
+            background-color: rgb(255, 174, 139);
+        }
+        a:link, a:visited {
+            width: auto;
+            margin: 3px;
+            background-color: pink !important;
+            border-width: 1px;
+            border-radius: 20px;
+            border-color: rgb(251, 176, 188) !important;
+            padding: 10px 10px 10px 10px;
+            color: white;
+        }
+        a:hover, a:active {
+            border-color: white !important;
+            background-color: white !important;
+            color: rgb(251, 176, 188) !important;
+        }
+        .btn-primary {
+            width: auto;
+            margin: 3px;
+            background-color: pink !important;
+            border-width: 1px;
+            border-radius: 20px;
+            border-color: rgb(251, 176, 188) !important;
+        }
+        .btn-primary:hover {
+            border-color: white !important;
+            background-color: white !important;
+            color: rgb(251, 176, 188) !important;
+        }
+        .btn-restaurant {
+            width: auto;
+            margin: 3px;
+            background-color: rgb(237, 235, 235) !important;
+            border-width: 1px;
+            border-radius: 20px;
+            border-color: rgb(190, 190, 190) !important;
+            color: grey !important;
+        }
+        .btn-restaurant:hover {
+            border-color: white !important;
+            background-color: white !important;
+            color: rgb(190, 190, 190) !important;
+        }
+        .btn-addtocart {
+            width: auto;
+            margin: 5px;
+            border-radius: 20px;
+            background-color: pink;
+            color: white;
+        }
+        .btn-addtocart:hover {
+            background-color: #f1f1f1;
+            color:rgb(227, 169, 179); 
+        }
+        .btn-confirm {
+            width: auto;
+            margin: 5px;
+            border-radius: 20px;
+            background-color: rgb(237, 235, 235);
+            color: grey;
+        }
+        .btn-confirm:hover {
+            background-color: #C1E1C1;
+            color: black;
+        }
+        .btn-remove {
+            background: transparent;
+            color: rgb(170, 170, 170);
+        }
+        .btn-remove:hover {
+            background-color: transparent;
+            color: grey;
+            font-size: 20px;
+        }
+        .list-group-item{
+            background-color: transparent;
+            padding-left: 10px;
+            width: 320px;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 20px;
+        }
+        .pagkain {
+            height: 180px;
+            width: 180px;
+        }
+        .material-symbols-outlined {
+            font-size: 16px;
+        }
+        .sidenav {
+            height: 100%;
+            width: 30%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #ffffffdb;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            padding-left: 10px;
+        }
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+        .accordion {
+            background-color: transparent;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 250px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+        .active, .accordion:hover {
+            background-color: transparent;
+        }
+        .accordion:after {
+            content: '\002B';
+            color: #444;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        .active:after {
+            content: "\2212";
+        }
+        .panel {
+            padding: 0 18px;
+            background-color: transparent;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        .card {
+            width: auto;
+            border-color: transparent !important;
+            background-color: transparent !important;
+        }
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 13px;
+            border: none;
+            outline: none;
+            background-color: pink;
+            color: white;
+            cursor: pointer;
+            padding: 9px;
+            border-radius: 30px;
+        }
+        #myBtn:hover {
+            background-color: white;
+            color: pink;
+        }
+    </style>
+     <script>
+     var myCart = [];
+     var menu = [
+        {foodname: "Pepperoni Pizza", foodprice: 380},
+        {foodname: "Cheese Pizza", foodprice: 490},
+        {foodname: "Spaghetti and Meatballs", foodprice: 220},
+        {foodname: "1pc Chickenjoy", foodprice: 82},
+        {foodname: "Cheesy Yumburger", foodprice: 66},
+        {foodname: "Chicken Alfredo", foodprice: 220},
+        {foodname: "Bottled Water", foodprice: 55},
+        {foodname: "Iced Tea", foodprice: 110},
+        {foodname: "Coke", foodprice: 53},
+        {foodname: "Coke Float", foodprice: 52},
+        {foodname: "Pineapple Juice", foodprice: 64},
+        {foodname: "Chocolate Chip Pancake", foodprice: 275},
+        {foodname: "Chocolate Marble Pancake & Waffle", foodprice: 239},
+        {foodname: "Blueberry Pancake & Waffle", foodprice: 239},
+        {foodname: "Blueberry Pancake Bites", foodprice: 10},
+        {foodname: "Vanilla Milkshake", foodprice: 179},
+        {foodname: "Chocolate Milkshake", foodprice: 179},
+    ];
+    function showCart() {
+        if(myCart.length == 0) {
+            document.getElementById("ulcart").innerHTML = '<li><em>No items.</em></li>';
+        } else {
+            var totprice = 0;
+            document.getElementById("ulcart").innerHTML = "";
+            for(var i=0; i<myCart.length; i++) {
+                totprice += myCart[i].foodprice
+                document.getElementById("ulcart").innerHTML += '<li class="list-group-item">'+ myCart[i].foodname + '<button class="btn btn-remove" onclick="remove(' + i +')"><span class="material-symbols-outlined">close</span></button></li>'
+            }
+            document.getElementById("totpricetxt").innerHTML = totprice;
+            document.getElementById("carti").value = JSON.stringify(myCart);
+        }
+    }
+    function addItem(event) {
+        var item = Number(event.target.id.slice(1,2))-1;
+        myCart.push(menu[item]);
+        showCart();
+    }
+    function addItem2(event) {
+        var item = Number(event.target.id.slice(1,3))-1;
+        myCart.push(menu[item]);
+        showCart();
+    }
+    function remove(i) {
+            myCart.splice(i,1);
+            showCart();
+        }
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "30%";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+</head>
+<body>
+    <header class="py-3 mb-3 border-bottom">
+        <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+          <div class="dropdown">
+              <img alt="logo" src="https://i.imgur.com/FW5OCmk.png">
+          </div>
+    
+          <div class="d-flex align-items-center">
+            <form class="w-100 me-3">
+              <input type="search" class="form-control" placeholder="What are you craving?" aria-label="Search">
+            </form>
+            <div class="flex-shrink-0 dropdown">
+                <img src="https://i.imgur.com/Bi9DWOJ.jpg" alt="mdo" class="rounded-circle">
+            </div>
+          </div>
+        </div>
+    </header>
+    <div class="container headerimage">
+        <div class="row">
+            <div class="col-sm-5">
+                <span class="johncena">boom</span>
+            </div>
+            <div class="col-sm-7">
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1>GrabPanda<span class="rawr">by the AristoCats™</span></h1>
+                <p>the <i>ultimate</i> food crossover - and here's the special thing about it - you can make your own crossovers too! no more arguing over which restaurant to order from. try GrabPanda now</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-7">
+                <button class="btn btn-primary" onclick="openNav()"><span class="material-symbols-outlined">shopping_cart</span> View Cart</button> <a href="#maincourses"><span class="material-symbols-outlined">fastfood</span> Main Courses</a> <a href="#desserts"><span class="material-symbols-outlined">icecream</span> Desserts</a> <a href="#drinks"><span class="material-symbols-outlined">local_bar</span> Drinks</a>
+            </div>
+            <div class="col-sm-5">
+                <button class="btn btn-restaurant"><span class="material-symbols-outlined">close</span> Jollibee</button> <button class="btn btn-restaurant"><span class="material-symbols-outlined">close</span> Pancake House</button> <button class="btn btn-restaurant"><span class="material-symbols-outlined">close</span> Yellow Cab</button>
+            </div>
+        </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" style="background-color: transparent;" onclick="closeNav()">&times;</a>
+        <div>
+            <h3>your cart.</h3>     
+              <ul id="ulcart">
+                  <li><em>No items.</em></li>
+              </ul>  
+              <p>
+                  <span class="d-inline-block" style="font-family: 'Work Sans', sans-serif;">Total: P</span>
+                  <span class="d-inline-block" id="totpricetxt">0</span>
+              </p>
+              <h4>★ DeliDeets</h4>
+              <form id="myform" action="http://sirjm.infinityfreeapp.com/aa2receiver.php" method="get">
+                  <b><label for="name" style="font-family: 'Poppins', sans-serif;">Name:</label></b><br>
+                  <input class="form-control mb-3" type="text" id="name" name="custname" placeholder="e.g. Marie Kitty" style="width: 380px; font-family: 'Work Sans', sans-serif;">
+                  <b><label for="addr" style="font-family: 'Poppins', sans-serif;">Address:</label></b><br>
+                  <input class="form-control mb-3" type="text" id="addr" name="deliveryaddr" placeholder="e.g. 28 Siamese St." style="width: 380px; font-family: 'Work Sans', sans-serif;">
+                  <div class="mb-3">  
+                      <div class="form-check">
+                          <label class="form-check-label" for="home" style="font-family: 'Work Sans', sans-serif;">Home</label>
+                          <input class="form-check-input" type="radio" name="addrtype" id="home" value="Home">
+                      </div>
+                      <div class="form-check">
+                          <label class="form-check-label" for="business" style="font-family: 'Work Sans', sans-serif;">Business</label>
+                          <input class="form-check-input" type="radio" name="addrtype" id="business" value="Business">
+                          <input type="hidden" name="foodcart" id="carti">
+                          <input type="hidden" name="restoname" id="restonametxt" value="JollyYellowHouse">
+                      </div>
+                    </div>
+                  <input type="submit" class="btn btn-confirm" value="confirm">
+            </form>
+          </div>
+    </div>
+    <br>
+    <br>
+    <div class="container mt-5" style="margin-bottom: 30px;">
+        <div class="row">
+            <div class="col-sm-1">
+                <span class="johncena">...</span>
+            </div>
+            <div class="col-sm-10">
+                <div class="row">
+                <span class="johncena">...<br>...</span>
+                <h3 id="maincourses" style="text-align: center;">∙ Main Courses ∙</h3>
+                <div class="card">
+                    <button class="accordion"><img src="https://i.imgur.com/ObnzHLk.png" class="pagkain" alt="pep pizza"><br><b>Pepperoni Pizza</b></button>
+                    <div class="panel">
+                        <h6 class="card-subtitle">P 380.00</h6> 
+                        <button type="button" class="btn btn-addtocart" onclick="addItem(event)" value="item1" id="i1">
+                            add to cart
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <button class="accordion"><img src="https://i.imgur.com/fMLV44j.png" class="pagkain" alt="cheese pizza"><br><b>Cheese Pizza</b></button>
+                    <div class="panel">
+                        <h6 class="card-subtitle">P 490.00</h6> 
+                        <button type="button" class="btn btn-addtocart" onclick="addItem(event)" value="item2" id="i2">
+                            add to cart
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <button class="accordion"><img src="https://i.imgur.com/xkiaW9A.png" class="pagkain" alt="spag"><br><b>Spaghetti and Meatballs</b></button>
+                    <div class="panel">
+                        <h6 class="card-subtitle">P 220.00</h6> 
+                        <button type="button" class="btn btn-addtocart" onclick="addItem(event)" value="item3" id="i3">
+                            add to cart
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <button class="accordion"><img src="https://i.imgur.com/moSulvR.png" class="pagkain" alt="chicken"><br><b>1 pc. Chickenjoy</b></button>
+                    <div class="panel">
+                        <h6 class="card-subtitle">P 82.00</h6> 
+                        <button type="button" class="btn btn-addtocart" onclick="addItem(event)" value="item4" id="i4">
+                            add to cart
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <button class="accordion"><img src="https://i.imgur.com/hDmWQmt.png" class="pagkain" alt="borger"><br><b>Cheesy Yumburger</b></button>
+                    <div class="panel">
+                        <h6 class="card-subtitle">P 66.00</h6> 
+                        <button type="button" class="btn btn-addtocart" onclick="addItem(event)" value="item5" id="i5">
+                            add to cart
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <button class="accordion"><img src="https://i.imgur.com/BmihEr8.png" class="pagkain" alt="alfredo"><br><b>Chicken Alfredo</b></button>
+                    <div class="panel">
+                        <h6 class="card-subtitle">P 220.00</h6> 
+                        <button type="button" class="btn btn-addtocart" onclick="addItem(event)" value="item6" id="i6">
+                            add to cart
+                        </button>
+                    </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <h3 id="desserts" style="text-align: center;">∙ Desserts ∙</h3>
+                <div class="card">
+                    <button class="accordion"><img src="https://i.imgur.com/n7by97t.png" class="pagkain" alt="choc chip"><br><b>Chocolate Chip Pancake</b></button>
+                    <div class="panel">
+                        <h6 class="card-subtitle">P 275.00</h6> 
+                        <button type="button" class="btn btn-addtocart" onclick="addItem2(event)" value="item12" id="i12">
+                            add to cart
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <button class="accordion"><img src="https://i.imgur.com/Ao1JX4p.png" class="pagkain" alt="choc marble"><br><b>Chocolate Marble Pancake & Waffle</b></button>
+                    <div class="panel">
+                        <h6 class="card-subtitle">P 239.00</h6> 
+                        <button type="button" class="btn btn-addtocart" onclick="addItem2(event)" value="item13" id="i13">
+                            add to cart
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <button class="accordion"><img src="https://i.imgur.com/cIYaX41.png" class="pagkain" alt="blueberry"><br><b>Blueberry Pancake & Waffle</b></button>
+                    <div class="panel">
+                        <h6 class="card-subtitle">P 239.00</h6> 
+                        <button type="button" class="btn btn-addtocart" onclick="addItem2(event)" value="item14" id="i14">
+                            add to cart
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <button class="accordion"><img src="https://i.imgur.com/3Fg6qax.png" class="pagkain" alt="blueberry bites"><br><b>Blueberry Pancake Bites</b></button>
+                    <div class="panel">
+                        <h6 class="card-subtitle">P 119.00</h6> 
+                        <button type="button" class="btn btn-addtocart" onclick="addItem2(event)" value="item15" id="i15">
+                            add to cart
+                        </button>
+                    </div>
+                </div>
+              </div>
+                <div class="row">
+                    <h3 id="drinks" style="text-align: center;">∙ Drinks ∙</h3>
+                    <div class="card">
+                        <button class="accordion"><img src="https://i.imgur.com/7ZYGsCr.png" class="pagkain" alt="tubig"><br><b>Bottled Water</b></button>
+                        <div class="panel">
+                            <h6 class="card-subtitle">P 55.00</h6> 
+                            <button type="button" class="btn btn-addtocart" onclick="addItem(event)" value="item7" id="i7">
+                                add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <button class="accordion"><img src="https://i.imgur.com/LIuMfsM.png" class="pagkain" alt="tea na iced"><br><b>Iced Tea</b></button>
+                        <div class="panel">
+                            <h6 class="card-subtitle">P 110.00</h6> 
+                            <button type="button" class="btn btn-addtocart" onclick="addItem(event)" value="item8" id="i8">
+                                add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <button class="accordion"><img src="https://i.imgur.com/NvDxidm.png" class="pagkain" alt="coke"><br><b>Coke</b></button>
+                        <div class="panel">
+                            <h6 class="card-subtitle">P 53.00</h6> 
+                            <button type="button" class="btn btn-addtocart" onclick="addItem(event)" value="item9" id="i9">
+                                add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <button class="accordion"><img src="https://i.imgur.com/ZlL1P70.png" class="pagkain" alt="coke na may float"><br><b>Coke Float</b></button>
+                        <div class="panel">
+                            <h6 class="card-subtitle">P 52.00</h6> 
+                            <button type="button" class="btn btn-addtocart" onclick="addItem2(event)" value="item10" id="i10">
+                                add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <button class="accordion"><img src="https://i.imgur.com/by1Epte.png" class="pagkain" alt="pinya"><br><b>Pineapple Juice</b></button>
+                        <div class="panel">
+                            <h6 class="card-subtitle">P 64.00</h6> 
+                            <button type="button" class="btn btn-addtocart" onclick="addItem2(event)" value="item11" id="i11">
+                                add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <button class="accordion"><img src="https://i.imgur.com/JMmdeBZ.png" class="pagkain" alt="vanilla shake"><br><b>Vanilla Milkshake</b></button>
+                        <div class="panel">
+                            <h6 class="card-subtitle">P 179.00</h6> 
+                            <button type="button" class="btn btn-addtocart" onclick="addItem2(event)" value="item16" id="i16">
+                                add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <button class="accordion"><img src="https://i.imgur.com/zvC0ydb.png" class="pagkain" alt="choc shake"><br><b>Chocolate Milkshake</b></button>
+                        <div class="panel">
+                            <h6 class="card-subtitle">P 179.00</h6> 
+                            <button type="button" class="btn btn-addtocart" onclick="addItem2(event)" value="item17" id="i17">
+                                add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <span class="johncena">,,,</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                        <div class="col-md-4 d-flex align-items-center">
+                            <img src="https://i.imgur.com/FW5OCmk.png" alt="MarieKitty">
+                            <span class="text-muted">&copy; 2023 Llemos, Mancao, Peralta</span>
+                        </div>
+                        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                            <li class="ms-3"><span class="material-symbols-outlined text-muted">info</span></li>
+                            <li class="ms-3"><span class="material-symbols-outlined text-muted">help</span></li>
+                            <li class="ms-3"><span class="material-symbols-outlined text-muted">settings</span></li>
+                        </ul>
+                    </footer>
+                </div>
+            </div>
+            </div>
+            </div>
+            <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-symbols-outlined">expand_less</span> scroll to top</button>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+
+        let mybutton = document.getElementById("myBtn");
+        
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
